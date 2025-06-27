@@ -1,96 +1,572 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* 重置默认样式 */
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 基础字体和排版设置 */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* 标题样式优化 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
+  margin: 2rem 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+h2 {
+  font-size: 2.5rem;
+  color: #34495e;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin: 2rem 0 1.5rem 0;
 }
 
-.card {
-  padding: 2em;
+h3 {
+  font-size: 2rem;
+  color: #2c3e50;
 }
 
-.read-the-docs {
-  color: #888;
+.title {
+  font-size: 3rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.myStyle h1 {
+  font-size: 4.5rem;
+}
+
+.myStyle h2 {
+  font-size: 3.5rem;
+}
+
+.myStyle h3 {
+  font-size: 3rem;
+}
+
+.myStyle h4 {
+  font-size: 2.5rem;
+}
+
+.myStyle h5 {
+  font-size: 2rem;
+}
+
+.myStyle h6 {
+  font-size: 1.5rem;
+}
+
+.mySpan {
+  /* 外间距 - 按钮之间的间距 */
+  margin: 5px 10px;
+  /* 内间距 - 按钮内部文字与边框的距离 */
+  padding: 12px 24px;
+  /* 字体颜色 - 白色文字确保在深色背景上可读 */
+  color: #fff;
+  /* 背景渐变 - 现代化的蓝绿色渐变 */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* 圆角处理 - 现代化的圆角设计 */
+  border-radius: 25px;
+  /* 鼠标手样式 - 表示可点击 */
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /* 字体设置 - 使用更专业的字体 */
+  font-weight: 500;
+  font-size: 0.95rem;
+  /* 过渡效果 - 平滑的悬停动画 */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 阴影效果 - 增加立体感 */
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  /* 边框 - 无边框设计 */
+  border: none;
+  /* 文字装饰 - 移除下划线 */
+  text-decoration: none;
+  /* 显示方式 - 内联块元素 */
+  display: inline-block;
+  /* 文字对齐 - 居中对齐 */
+  text-align: center;
+  /* 防止文字选择 - 提升用户体验 */
+  user-select: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* 按钮悬停效果 */
+.mySpan:hover {
+  /* 悬停时的背景渐变 - 更亮的颜色 */
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  /* 悬停时的阴影 - 更强的立体感 */
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  /* 悬停时的变换 - 轻微上移效果 */
+  transform: translateY(-2px);
+}
+
+/* 按钮点击效果 */
+.mySpan:active {
+  /* 点击时的变换 - 轻微下压效果 */
+  transform: translateY(0);
+  /* 点击时的阴影 - 减少阴影模拟按下效果 */
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+/* 头部导航栏样式 */
+header {
+  /* 弹性布局 - 水平排列导航元素 */
+  display: flex;
+  /* 元素分布 - 均匀分布在容器中 */
+  justify-content: space-between;
+  /* 垂直对齐 - 居中对齐 */
+  align-items: center;
+  /* 内边距 - 头部内容与边缘的距离 */
+  padding: 1.5rem 3rem;
+  /* 背景 - 半透明白色背景 */
+  background: rgba(255, 255, 255, 0.95);
+  /* 模糊效果 - 毛玻璃效果 */
+  backdrop-filter: blur(10px);
+  /* 阴影 - 轻微的下方阴影 */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  /* 定位 - 固定在页面顶部 */
+  position: sticky;
+  top: 0;
+  /* 层级 - 确保在其他元素之上 */
+  z-index: 1000;
+  /* 过渡效果 - 平滑的样式变化 */
+  transition: all 0.3s ease;
+}
+
+/* Logo样式 */
+.logo {
+  /* 字体大小 - 较大的Logo文字 */
+  font-size: 1.8rem;
+  /* 字体粗细 - 加粗显示 */
+  font-weight: 700;
+  /* 字体颜色 - 深色文字 */
+  color: #2c3e50;
+  /* 文字装饰 - 无下划线 */
+  text-decoration: none;
+  /* 字母间距 - 增加字母间距提升视觉效果 */
+  letter-spacing: 1px;
+}
+
+/* 导航栏容器 */
+nav {
+  /* 弹性布局 - 水平排列导航链接 */
+  display: flex;
+  /* 元素间距 - 导航项之间的间距 */
+  gap: 0.5rem;
+  /* 垂直对齐 - 居中对齐 */
+  align-items: center;
+}
+
+/* 导航链接样式 */
+header a {
+  /* 文字装饰 - 移除默认下划线 */
+  text-decoration: none;
+  /* 过渡效果 - 平滑的颜色变化 */
+  transition: color 0.3s ease;
+}
+
+/* 头像样式 */
+header img.headphoto {
+  /* 外边距 - 重置默认边距 */
+  margin: 0;
+  /* 内边距 - 重置默认内边距 */
+  padding: 0;
+  /* 宽度 - 头像大小 */
+  width: 60px;
+  /* 高度 - 保持正方形 */
+  height: 60px;
+  /* 圆角 - 圆形头像 */
+  border-radius: 50%;
+  /* 对象适应 - 保持图片比例 */
+  object-fit: cover;
+  /* 边框 - 白色边框增加层次感 */
+  border: 3px solid #fff;
+  /* 阴影 - 轻微阴影增加立体感 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* 过渡效果 - 平滑的变换效果 */
+  transition: transform 0.3s ease;
+}
+
+/* 头像悬停效果 */
+header img.headphoto:hover {
+  /* 悬停变换 - 轻微放大效果 */
+  transform: scale(1.1);
+}
+
+/* 主要内容区域样式 */
+section.mySection {
+  /* 弹性布局 - 垂直排列内容 */
+  display: flex;
+  /* 水平居中 - 内容水平居中对齐 */
+  justify-content: center;
+  /* 垂直居中 - 内容垂直居中对齐 */
+  align-items: center;
+  /* 排列方向 - 垂直排列 */
+  flex-direction: column;
+  /* 内边距 - 内容区域的内边距 */
+  padding: 3rem 2rem;
+  /* 最小高度 - 确保内容区域有足够高度 */
+  min-height: 100vh;
+  /* 相对定位 - 为子元素提供定位参考 */
+  position: relative;
+}
+
+/* 段落样式优化 */
+.mySection p {
+  /* 最大宽度 - 限制段落宽度提升可读性 */
+  max-width: 900px;
+  /* 文字对齐 - 两端对齐 */
+  text-align: justify;
+  /* 行高 - 增加行间距提升可读性 */
+  line-height: 1.8;
+  /* 字体大小 - 适中的字体大小 */
+  font-size: 1.1rem;
+  /* 字体颜色 - 深灰色文字 */
+  color: #555;
+  /* 下边距 - 段落之间的间距 */
+  margin-bottom: 2rem;
+  /* 内边距 - 段落内边距 */
+  padding: 0 1rem;
+  /* 背景 - 半透明白色背景 */
+  background: rgba(255, 255, 255, 0.8);
+  /* 圆角 - 轻微圆角 */
+  border-radius: 12px;
+  /* 阴影 - 轻微阴影增加层次感 */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  /* 内边距 - 段落内部间距 */
+  padding: 2rem;
+  /* 过渡效果 - 平滑的悬停效果 */
+  transition: all 0.3s ease;
+}
+
+/* 段落悬停效果 */
+.mySection p:hover {
+  /* 悬停阴影 - 增强阴影效果 */
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  /* 悬停变换 - 轻微上移效果 */
+  transform: translateY(-2px);
+}
+
+/* 文章容器样式 */
+article {
+  /* 最大宽度 - 限制文章宽度 */
+  max-width: 1200px;
+  /* 宽度 - 响应式宽度 */
+  width: 100%;
+  /* 外边距 - 水平居中 */
+  margin: 0 auto;
+  /* 内边距 - 文章内边距 */
+  padding: 2rem;
+}
+
+/* 返回顶部按钮样式 */
+.toTop a {
+  /* 文字装饰 - 移除下划线 */
+  text-decoration: none;
+}
+
+.toTop span {
+  /* 固定定位 - 固定在页面右侧 */
+  position: fixed;
+  /* 右边距 - 距离右边缘的距离 */
+  right: 2rem;
+  /* 底部距离 - 距离底部的距离 */
+  bottom: 2rem;
+  /* 宽度 - 按钮宽度 */
+  width: 60px;
+  /* 高度 - 按钮高度 */
+  height: 60px;
+  /* 网格布局 - 内容居中对齐 */
+  display: grid;
+  /* 内容居中 - 文字居中显示 */
+  place-items: center;
+  /* 背景渐变 - 现代化渐变背景 */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* 圆角 - 圆形按钮 */
+  border-radius: 50%;
+  /* 鼠标样式 - 手型指针 */
+  cursor: pointer;
+  /* 文字颜色 - 白色文字 */
+  color: #fff;
+  /* 阴影 - 立体阴影效果 */
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+  /* 过渡效果 - 平滑动画 */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* 层级 - 确保在其他元素之上 */
+  z-index: 1000;
+  /* 字体大小 - 适中的字体大小 */
+  font-size: 0.9rem;
+  /* 字体粗细 - 加粗文字 */
+  font-weight: 600;
+  /* 边框 - 白色边框 */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 返回顶部按钮悬停效果 */
+.toTop span:hover {
+  /* 悬停变换 - 放大和上移效果 */
+  transform: translateY(-3px) scale(1.1);
+  /* 悬停阴影 - 增强阴影效果 */
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
+  /* 悬停背景 - 反向渐变 */
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* 返回顶部按钮点击效果 */
+.toTop span:active {
+  /* 点击变换 - 轻微缩小效果 */
+  transform: scale(0.95);
+}
+
+/* 文本选择效果优化 */
+.html::selection {
+  /* HTML文本选择背景 - 紫色背景 */
+  background-color: purple;
+  /* 选择文字颜色 - 白色文字 */
+  color: white;
+}
+
+.css::selection {
+  /* CSS文本选择背景 - 红色背景 */
+  background-color: red;
+  /* 选择文字颜色 - 蓝色文字 */
+  color: blue;
+}
+
+.javascript::selection {
+  /* JavaScript文本选择背景 - 黑色背景 */
+  background-color: black;
+  /* 选择文字颜色 - 金色文字 */
+  color: gold;
+}
+
+/* 默认文本选择效果 */
+::selection {
+  /* 默认选择背景 - 蓝色背景 */
+  background-color: #667eea;
+  /* 默认选择文字颜色 - 白色文字 */
+  color: white;
+}
+
+/* 视频元素样式 */
+video {
+  /* 上边距 - 与上方内容的间距 */
+  margin: 3rem 0;
+  /* 最大宽度 - 响应式宽度设置 */
+  max-width: 900px;
+  /* 宽度 - 100%宽度适应容器 */
+  width: 100%;
+  /* 高度 - 自动高度保持比例 */
+  height: auto;
+  /* 圆角 - 现代化圆角设计 */
+  border-radius: 20px;
+  /* 阴影 - 深度阴影效果 */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  /* 过渡效果 - 平滑的悬停动画 */
+  transition: all 0.3s ease;
+  /* 边框 - 细微的边框 */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 视频悬停效果 */
+video:hover {
+  /* 悬停变换 - 轻微放大效果 */
+  transform: scale(1.02);
+  /* 悬停阴影 - 增强阴影效果 */
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* 音频元素样式 */
+audio {
+  /* 最大宽度 - 响应式宽度设置 */
+  max-width: 900px;
+  /* 宽度 - 100%宽度适应容器 */
+  width: 100%;
+  /* 上边距 - 与上方内容的间距 */
+  margin: 2rem 0;
+  /* 高度 - 音频控件高度 */
+  height: 60px;
+  /* 圆角 - 现代化圆角设计 */
+  border-radius: 30px;
+  /* 阴影 - 轻微阴影效果 */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  /* 背景 - 半透明白色背景 */
+  background: rgba(255, 255, 255, 0.9);
+  /* 过渡效果 - 平滑的悬停动画 */
+  transition: all 0.3s ease;
+  /* 边框 - 细微的边框 */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 音频悬停效果 */
+audio:hover {
+  /* 悬停阴影 - 增强阴影效果 */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  /* 悬停变换 - 轻微上移效果 */
+  transform: translateY(-2px);
+}
+
+/* 背景样式优化 */
+.background {
+  /* 固定定位 - 背景固定在视窗 */
+  position: fixed;
+  /* 层级 - 置于最底层 */
+  z-index: -1;
+  /* 位置 - 覆盖整个视窗 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* 宽度和高度 - 覆盖整个视窗 */
+  width: 100%;
+  height: 100%;
+  /* 背景渐变 - 现代化的渐变背景 */
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(240, 248, 255, 0.8) 25%,
+      rgba(230, 245, 255, 0.7) 50%,
+      rgba(220, 240, 255, 0.8) 75%,
+      rgba(210, 235, 255, 0.9) 100%);
+  /* 背景图案 - 添加微妙的纹理 */
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+  /* 背景附着 - 固定背景 */
+  background-attachment: fixed;
+}
+
+/* 响应式设计 - 平板设备 */
+@media (max-width: 1024px) {
+
+  /* 头部导航栏适配 */
+  header {
+    padding: 1rem 2rem;
   }
-  a:hover {
-    color: #747bff;
+
+  /* Logo字体大小调整 */
+  .logo {
+    font-size: 1.5rem;
   }
-  button {
-    background-color: #f9f9f9;
+
+  /* 导航按钮间距调整 */
+  .mySpan {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin: 3px 8px;
+  }
+
+  /* 主标题字体大小调整 */
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  /* 二级标题字体大小调整 */
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* 响应式设计 - 手机设备 */
+@media (max-width: 768px) {
+
+  /* 头部导航栏移动端适配 */
+  header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  /* 导航栏移动端布局 */
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  /* 移动端按钮样式 */
+  .mySpan {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    margin: 2px 4px;
+  }
+
+  /* 移动端主标题 */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  /* 移动端二级标题 */
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  /* 移动端段落样式 */
+  .mySection p {
+    font-size: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* 移动端内容区域 */
+  section.mySection {
+    padding: 2rem 1rem;
+  }
+
+  /* 移动端文章容器 */
+  article {
+    padding: 1rem;
+  }
+
+  /* 移动端返回顶部按钮 */
+  .toTop span {
+    width: 50px;
+    height: 50px;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* 响应式设计 - 小屏手机 */
+@media (max-width: 480px) {
+
+  /* 超小屏幕主标题 */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  /* 超小屏幕二级标题 */
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* 超小屏幕Logo */
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  /* 超小屏幕头像 */
+  header img.headphoto {
+    width: 50px;
+    height: 50px;
   }
 }
